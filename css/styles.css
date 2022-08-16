@@ -1,0 +1,184 @@
+/* Google Fonts https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Custom Properties */
+:root {
+    --red-hat-display: 'Red Hat Display', sans-serif;
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+/* Reset Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Standard Styles */
+body {
+    font-family: var(--red-hat-display);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--desaturated-blue);
+    line-height: 1.5;
+}
+
+.cta {
+    text-decoration: none;
+}
+
+/* Main */
+.main {
+    background-color: var(--pale-blue);
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main | Card */
+.main-card {
+    max-width: 450px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--very-pale-blue);
+    text-align: center;
+}
+
+/* Main | Card | Info */
+.card-info {
+    padding: 30px 45px 45px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Main | Card | Info | Texts */
+.info-texts {
+    padding: 25px;
+    /* flex-grow: 1; */
+}
+
+.texts-title {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+/* Main | Card | Info | Plan */
+.info-plan {
+    position: relative;
+    bottom: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.plan-change {
+    text-decoration: underline;
+    color: var(--bright-blue);
+    font-weight: 700;
+}
+
+/* Main | Card | Info | Plan | Numbers */
+.plan-numbers {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.numbers-title {
+    font-size: inherit;
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+/* Main | Card | Info | Actions */
+.info-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 700;
+}
+.actions-proceed {
+    width: 100%;
+    background-color: var(--bright-blue);
+    padding: 10px 0;
+    color: var(--very-pale-blue);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 hsla(224, 23%, 55%, 0.75);
+}
+
+.actions-cancel {
+    color: inherit;
+    padding: 10px 0;
+}
+
+/* Active States */
+.plan-change:hover {
+    color: hsl(245, 83%, 68%);
+    text-decoration: none;
+}
+
+.actions-proceed:hover {
+    background-color: hsl(245, 83%, 68%);
+}
+
+.actions-cancel:hover {
+    color: var(--dark-blue);
+}
+
+/* Mobile Design */
+@media (max-width: 720px) {
+    /* Standard Styles */
+    body {
+        font-size: 14px;
+    }
+
+    /* Main */
+    .main {
+        min-height: 709px;
+        background-image: url(../images/pattern-background-mobile.svg);
+        padding: 0 25px;
+    }
+
+    /* Main | Card */
+    .main-card {
+        height: 570px;
+    }
+
+    /* Main | Card | Info | Texts */
+    .info-texts {
+        padding: 0;
+    }
+
+    .texts-title {
+        font-size: 20px;
+    }
+
+    /* Main | Card | Info | Plan */
+    .info-plan {
+        padding: 0;
+    }
+
+    /* Main | Card | Info | Actions */
+    .actions-proceed {
+        width: 100%;
+        background-color: var(--bright-blue);
+        padding: 15px 0;
+        color: var(--very-pale-blue);
+        font-weight: 700;
+        border-radius: 10px;
+    }
+}
